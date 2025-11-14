@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rouse DECA | Official Chapter Website</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --deca-blue: #003DA5;
+            --deca-dark: #002D7A;
+            --bg-light: #f2f5fc;
+            --bg-dark: #0c1221;
+            --text-light: #333;
+            --text-dark: #f5f5f5;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            scroll-behavior: smooth;
+            transition: 0.3s ease-in-out;
+        }
+
+        /* DARK MODE */
+        body.dark {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        header {
+            background: var(--deca-blue);
+            text-align: center;
+            padding: 30px;
+            color: white;
+            position: relative;
+        }
+
+        header img {
+            width: 80px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: var(--deca-dark);
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* DARK MODE BUTTON */
+        #toggleDark {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            padding: 12px 18px;
+            background: var(--deca-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* HERO */
+        .hero {
+            height: 430px;
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url('https://www.deca.org/sites/default/files/2021-10/DECA-Background-3.jpg')
+                center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 1.8s ease-in-out;
+        }
+
+        .hero h2 {
+            font-size: 3.4rem;
+            animation: slideDown 1.5s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            animation: fadeIn 3s ease;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* SECTIONS */
+        .section {
+            padding: 60px 80px;
+            animation: slideUp 1s ease forwards;
+        }
+
+        h2.section-title {
+            font-size: 2.3rem;
+            color: var(--deca-blue);
+            border-left: 7px solid var(--deca-blue);
+            padding-left: 12px;
+            margin-bottom: 20px;
+        }
+
+        body.dark h2.section-title {
+            color: #7eb4ff;
+            border-left-color: white;
+        }
+
+        /* CARDS */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .card {
+            width: 300px;
+            background: white;
+            border-radius: 14px;
+            padding: 22px;
+            box-shadow: 0px 6px 20px rgba(0,0,0,0.12);
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0px 12px 25px rgba(0,0,0,0.2);
+        }
+
+        .motm-img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        /* DARK MODE CARD FIX */
+        body.dark .card {
+            background: #1a2640;
+            color: white;
+        }
+
+        /* RESPONSIVE FIX */
+        @media (max-width: 800px) {
+            .section { padding: 40px 25px; }
+            nav { flex-wrap: wrap; gap: 20px; }
+            .cards { justify-content: center; }
+            .hero h2 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- DARK MODE BUTTON -->
+    <button id="toggleDark">Dark Mode</button>
+
+    <header>
+        <img src="
+
+           

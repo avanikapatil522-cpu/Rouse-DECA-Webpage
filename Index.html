@@ -5,198 +5,400 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rouse DECA | Official Chapter Website</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --deca-blue: #003DA5;
-            --deca-dark: #002D7A;
-            --bg-light: #f2f5fc;
-            --bg-dark: #0c1221;
-            --text-light: #333;
-            --text-dark: #f5f5f5;
+            --deca-blue-light: #0A4DFF;
+            --deca-blue-dark: #001D55;
+            --light-bg: #F3F6FF;
+            --dark-bg: #0B1223;
+            --dark-card: #15203A;
         }
 
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-light);
-            scroll-behavior: smooth;
+            background: var(--light-bg);
+            color: #1a1a1a;
             transition: 0.3s ease-in-out;
+            scroll-behavior: smooth;
         }
 
-        /* DARK MODE */
         body.dark {
-            background-color: var(--bg-dark);
-            color: var(--text-dark);
+            background: var(--dark-bg);
+            color: #eaeaea;
         }
 
+        /* HEADER */
         header {
             background: var(--deca-blue);
             text-align: center;
-            padding: 30px;
+            padding: 35px 20px;
             color: white;
-            position: relative;
         }
-
         header img {
-            width: 80px;
-            animation: fadeIn 2s ease-in-out;
+            width: 90px;
+            margin-bottom: 10px;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 700;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
 
-        /* NAVBAR */
+        /* NAVIGATION */
         nav {
-            background: var(--deca-dark);
+            background: var(--deca-blue-dark);
+            color: white;
             display: flex;
             justify-content: center;
-            gap: 40px;
-            padding: 15px 0;
+            gap: 50px;
+            padding: 16px 0;
             position: sticky;
             top: 0;
-            z-index: 10;
+            z-index: 50;
         }
-
         nav a {
             color: white;
-            text-decoration: none;
             font-weight: 600;
-            transition: 0.3s;
+            text-decoration: none;
+            transition: 0.25s;
         }
-
-        nav a:hover {
-            opacity: 0.7;
-        }
+        nav a:hover { opacity: 0.65; }
 
         /* DARK MODE BUTTON */
         #toggleDark {
             position: fixed;
             right: 20px;
             bottom: 20px;
-            padding: 12px 18px;
+            padding: 12px 20px;
+            border: none;
             background: var(--deca-blue);
             color: white;
-            border: none;
             border-radius: 8px;
-            cursor: pointer;
             font-weight: 600;
-            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+            cursor: pointer;
+            box-shadow: 0px 6px 20px rgba(0,0,0,0.4);
         }
 
-        /* HERO */
+        /* HERO SECTION */
         .hero {
-            height: 430px;
-            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-                url('https://www.deca.org/sites/default/files/2021-10/DECA-Background-3.jpg')
-                center/cover no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            animation: fadeIn 1.8s ease-in-out;
+    height: 450px;
+    background: #ffffff; /* white background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #000000; /* black text */
+}
+
+      
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    color: #000000; /* black */
+    text-shadow: none;
+}
+
+        @keyframes gradientFlow {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
         }
 
-        .hero h2 {
-            font-size: 3.4rem;
-            animation: slideDown 1.5s ease-in-out;
-        }
+.hero h2 {
+    font-size: 3.2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #000000; /* black */
+    text-shadow: none;
+}
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            animation: fadeIn 3s ease;
-        }
+.hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    color: #000000; /* black */
+    text-shadow: none;
+}
 
-        /* ANIMATIONS */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.98); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* SECTIONS */
+        /* SECTION BASE */
         .section {
-            padding: 60px 80px;
-            animation: slideUp 1s ease forwards;
+            padding: 65px 75px;
         }
-
-        h2.section-title {
-            font-size: 2.3rem;
+        .section-title {
+            font-size: 2.5rem;
             color: var(--deca-blue);
+            font-weight: 700;
             border-left: 7px solid var(--deca-blue);
-            padding-left: 12px;
-            margin-bottom: 20px;
+            padding-left: 14px;
+            margin-bottom: 25px;
         }
-
-        body.dark h2.section-title {
-            color: #7eb4ff;
-            border-left-color: white;
+        body.dark .section-title {
+            color: #78AFFF;
+            border-left-color: #78AFFF;
         }
 
         /* CARDS */
         .cards {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 32px;
         }
-
         .card {
-            width: 300px;
+            width: 310px;
             background: white;
-            border-radius: 14px;
-            padding: 22px;
-            box-shadow: 0px 6px 20px rgba(0,0,0,0.12);
-            transition: 0.3s ease;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0px 7px 20px rgba(0,0,0,0.12);
+            transition: 0.3s;
         }
-
         .card:hover {
             transform: translateY(-7px);
-            box-shadow: 0px 12px 25px rgba(0,0,0,0.2);
+            box-shadow: 0px 12px 30px rgba(0,0,0,0.2);
         }
-
-        .motm-img {
-            width: 100%;
-            height: 170px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 12px;
-        }
-
-        /* DARK MODE CARD FIX */
         body.dark .card {
-            background: #1a2640;
+            background: var(--dark-card);
             color: white;
         }
 
-        /* RESPONSIVE FIX */
-        @media (max-width: 800px) {
+        /* OFFICER GRID */
+        .officer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+        }
+        .officer {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0px 7px 20px rgba(0,0,0,0.12);
+            transition: 0.3s;
+        }
+        .officer:hover { transform: translateY(-7px); }
+        .officer img {
+            width: 115px;
+            height: 115px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--deca-blue);
+            margin-bottom: 12px;
+        }
+        body.dark .officer { background: var(--dark-card); color: white; }
+
+        /* MEMBER OF MONTH IMAGE */
+        .motm-img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 14px;
+        }
+
+        footer {
+            background: var(--deca-blue);
+            text-align: center;
+            color: white;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 850px) {
             .section { padding: 40px 25px; }
             nav { flex-wrap: wrap; gap: 20px; }
-            .cards { justify-content: center; }
-            .hero h2 { font-size: 2.5rem; }
+            .hero h2 { font-size: 2.1rem; }
+            .hero p { font-size: 1rem; }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- DARK MODE BUTTON -->
-    <button id="toggleDark">Dark Mode</button>
+<button id="toggleDark">Dark Mode</button>
 
-    <header>
-        <img src="
+<header>
+    <h1>Rouse DECA</h1>
+    <p>Emerging Leaders • Entrepreneurs • Innovators</p>
+</header>
 
-           
+<nav>
+    <a href="#about">About</a>
+    <a href="#mission">Mission</a>
+    <a href="#events">Events</a>
+    <a href="#officers">Officer Team</a>
+    <a href="#motm">Member of the Month</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+    <h2>Welcome to Rouse DECA</h2>
+    <p>Building future leaders through competition, creativity, professionalism, and community.</p>
+</section>
+
+<section id="about" class="section">
+    <h2 class="section-title">About Our Chapter</h2>
+    <p>
+        Rouse DECA is an award winning organization dedicated to developing the next generation 
+        of leaders in marketing, business, finance, hospitality, and entrepreneurship. Through competition, 
+        workshops, travel, leadership training, and real world business experience, our members gain the 
+        confidence and skills needed to succeed in any professional environment.
+    </p>
+    <br>
+    <p>
+        Our chapter emphasizes collaboration, innovation, and personal growth. Whether you're preparing for 
+        competitive events, taking on leadership roles, or engaging in community projects, Rouse DECA provides 
+        the support and resources students need to excel.
+    </p>
+</section>
+
+<section id="mission" class="section">
+    <h2 class="section-title">Our Mission</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Leadership Development</h3>
+            <p>We equip students with essential leadership, teamwork, communication, and public-speaking skills.</p>
+        </div>
+        <div class="card">
+            <h3>Competitive Excellence</h3>
+            <p>Members compete at District, State, and International levels in professional-grade business events.</p>
+        </div>
+        <div class="card">
+            <h3>Career & College Preparation</h3>
+            <p>Students gain experience in project management, marketing strategy, finance, hospitality, and entrepreneurship.</p>
+        </div>
+    </div>
+</section>
+
+<section id="events" class="section">
+    <h2 class="section-title">Upcoming Events</h2>
+    <div class="cards">
+        <div class="card"><h3>District Conference</h3><p>January 2026 — Cedar Park, TX</p></div>
+        <div class="card"><h3>State CDC</h3><p>February 2026 — Dallas, TX</p></div>
+        <div class="card"><h3>Weekly Meetings</h3><p>Every Thursday — Business Wing</p></div>
+    </div>
+</section>
+
+<section id="officers" class="section">
+    <h2 class="section-title">2025–2026 Officer Team</h2>
+    <p>Our officer team leads chapter operations, communication, competitive training, planning, and outreach.</p>
+    <br><br>
+
+    <div class="officer-grid">
+
+        <div class="officer">
+            <img src="https://via.placeholder.com/115">
+            <h3>President</h3>
+            <p>Provides leadership, oversees chapter operations, manages chapter goals, and represents Rouse DECA at all events.</p>
+        </div>
+
+        <div class="officer">
+            <img src="https://via.placeholder.com/115">
+            <h3>Vice President</h3>
+            <p>Assists in chapter planning, supervises committees, and ensures smooth execution of activities.</p>
+        </div>
+
+        <div class="officer">
+            <img src="https://via.placeholder.com/115">
+            <h3>VP of Marketing</h3>
+            <p>Leads branding, advertising, and promotional campaigns to increase member engagement.</p>
+        </div>
+
+        <div class="officer">
+            <img src="https://via.placeholder.com/115">
+            <h3>VP of Finance</h3>
+            <p>Oversees fundraising, budgeting, receipts, and financial documentation for the chapter.</p>
+        </div>
+
+        <div class="officer">
+            <img src="https://via.placeholder.com/115">
+            <h3>VP of Hospitality</h3>
+            <p>Creates an inclusive environment, manages member recognition, and supports chapter morale.</p>
+        </div>
+
+        <div class="officer">
+            <img src="https://via.placeholder.com/115">
+            <h3>VP of Leadership</h3>
+            <p>Coordinates leadership events, conferences, workshops, and professional development experiences.</p>
+        </div>
+
+        <div class="officer">
+            <img src="https://via.placeholder.com/115">
+            <h3>Director of Communications</h3>
+            <p>Manages internal communication, announcements, reminders, and member updates.</p>
+        </div>
+
+        <div class="officer">
+            <img src="https://via.placeholder.com/115">
+            <h3>Director of Social Media</h3>
+            <p>Runs chapter social media accounts, creates content, and promotes events online.</p>
+        </div>
+
+        <div class="officer">
+            <img src="https://via.placeholder.com/115">
+            <h3>Director of Events</h3>
+            <p>Plans, organizes, and manages all chapter events, meetings, and activities.</p>
+        </div>
+
+        <div class="officer">
+            <img src="https://via.placeholder.com/115">
+            <h3>Webmaster</h3>
+            <p>Maintains the chapter website, designs digital content, and enhances online communication.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="motm" class="section">
+    <h2 class="section-title">Member of the Month</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x190" class="motm-img">
+            <h3>November 2025</h3>
+            <p>Recognizing a member who demonstrates outstanding leadership, dedication, and chapter involvement.</p>
+        </div>
+        <div class="card">
+            <h3>How It Works</h3>
+            <p>Members earn points through:</p>
+            <ul>
+                <li>Meeting attendance</li>
+                <li>Volunteering</li>
+                <li>Practice role-plays</li>
+                <li>Leadership & initiative</li>
+                <li>Promoting DECA events</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2 class="section-title">Contact Us</h2>
+    <p>Email: rousedeca@gmail.com</p>
+    <p>Instagram: @rousedeca</p>
+</section>
+
+<footer>
+    © Rouse DECA 2025–2026 • Website designed by Webmaster
+</footer>
+
+<script>
+    document.getElementById("toggleDark").onclick = function () {
+        document.body.classList.toggle("dark");
+    }
+</script>
+
+</body>
+</html>
+
+            

@@ -179,6 +179,22 @@
     font-size: 1.25rem;
     max-width: 700px;
 }
+/* Prevent dark mode from greying out hero image */
+body.dark .hero {
+    background: url("https://raw.githubusercontent.com/avanikapatil522-cpu/Rouse-DECA-Webpage/main/Screenshot%202025-11-23%20150424.png")
+                center/cover no-repeat !important;
+}
+
+/* Dark mode overlay adjust */
+body.dark .hero::before {
+    background: rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Make text white in dark mode */
+body.dark .hero h2,
+body.dark .hero p {
+    color: #ffffff !important;
+}
 
 
         /* SECTION BASE */

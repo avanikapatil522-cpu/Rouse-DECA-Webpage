@@ -234,6 +234,63 @@
             .hero h2 { font-size: 2.1rem; }
             .hero p { font-size: 1rem; }
         }
+        /* FULL DARK MODE FIX */
+
+body.dark .hero {
+    background: var(--dark-bg) !important;
+    color: white !important;
+}
+
+body.dark #about,
+body.dark #mission,
+body.dark #events,
+body.dark #officers,
+body.dark #competition-help,
+body.dark #gallery,
+body.dark #motm,
+body.dark #contact {
+    background: var(--dark-bg) !important;
+    color: #eaeaea !important;
+}
+
+body.dark #mission div,
+body.dark #events div,
+body.dark #gallery div,
+body.dark #competition-help div {
+    background: none !important;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark a {
+    color: #eaeaea !important;
+}
+
+body.dark .deca-card,
+body.dark .card,
+body.dark .officer {
+    background: var(--dark-card) !important;
+    color: white !important;
+    border-left-color: var(--deca-blue-light) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.45) !important;
+}
+
+body.dark .swiper-button-next,
+body.dark .swiper-button-prev {
+    color: white !important;
+}
+
+body.dark #lightbox-overlay {
+    background: rgba(0,0,0,0.95) !important;
+}
+
+body.dark footer {
+    background: #001633 !important;
+    color: white !important;
+}
+
     </style>
 </head>
 
